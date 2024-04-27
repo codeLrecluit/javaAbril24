@@ -1,14 +1,13 @@
 package com;
-
+import java.util.Objects;
 public class Alumno {
-	
 	String nombre;
 	int edad;
 	String numeroControl;
 	String procedencia;
 	String sexo;
 	String carrera;
-	
+
 	public Alumno() {
 		
 	}
@@ -66,7 +65,6 @@ public class Alumno {
 	public String getCarrera() {
 		return carrera;
 	}
-
 	public void setCarrera(String carrera) {
 		this.carrera = carrera;
 	}
@@ -76,7 +74,20 @@ public class Alumno {
 		return "Alumno [nombre=" + nombre + ", edad=" + edad + ", numeroControl=" + numeroControl + ", procedencia="
 				+ procedencia + ", sexo=" + sexo + ", carrera=" + carrera + "]";
 	}
-	
+
+
+	 @Override
+	 public boolean equals(Object obj) {
+		 if (this == obj) {
+			 return true;
+			}
+		 if (obj == null || getClass() != obj.getClass()) {
+			 return false;
+			}
+		 Alumno alumno = (Alumno) obj;
+		 return Objects.equals(nombre, alumno.nombre) &&
+				 Objects.equals(numeroControl, alumno.numeroControl);
+		 }	
 	
 
 }
