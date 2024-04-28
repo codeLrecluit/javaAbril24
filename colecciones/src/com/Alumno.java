@@ -10,10 +10,11 @@ public class Alumno {
 	String carrera;
 	
 	public Alumno() {
-		
-	}
 
+}
+	
 	public Alumno(String nombre, int edad, String numeroControl, String procedencia, String sexo, String carrera) {
+		
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
@@ -78,5 +79,9 @@ public class Alumno {
 	}
 	
 	
-
 }
+
+	
+
+
+
